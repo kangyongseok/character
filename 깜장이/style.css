@@ -38,7 +38,7 @@ body {
 
 .wrap .head {
   background: #4c4c4c;
-  border: 2px solid black;
+  border: 3px solid black;
   width: 300px;
   height: 300px;
   border-radius: 300px;
@@ -102,7 +102,7 @@ body {
 
 .wrap .head .eye {
   background: white;
-  border: 2px solid black;
+  border: 3px solid black;
   width: 120px;
   height: 120px;
   border-radius: 100px;
@@ -142,7 +142,7 @@ body {
   width: 130px;
   height: 130px;
   background: #4c4c4c;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 100px;
   position: absolute;
   bottom: 30px;
@@ -201,6 +201,7 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
+  border: 3px solid black;
 }
 
 .wrap .head .mouse::after {
@@ -222,6 +223,8 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   overflow: hidden;
+  border: 3px solid black;
+  border-top: none;
 }
 
 .wrap .head .mouse.smile::before {
@@ -257,6 +260,7 @@ body {
   border-radius: 70px;
   bottom: 50px;
   margin-left: -25px;
+  border: 3px solid black;
 }
 
 .wrap .head .mouse.eating::after {
