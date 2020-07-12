@@ -180,6 +180,7 @@ body {
             animation-name: smile;
             animation-duration: 3s;
             animation-fill-mode: forwards;
+            overflow: hidden;
             &::before {
                 content: '';
                 display: block;

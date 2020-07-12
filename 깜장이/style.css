@@ -221,6 +221,7 @@ body {
           animation-duration: 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  overflow: hidden;
 }
 
 .wrap .head .mouse.smile::before {
