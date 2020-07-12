@@ -1,0 +1,405 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+.wrap {
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .head {
+  background: #4c4c4c;
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  position: relative;
+}
+
+.wrap .head .eye_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 70px;
+}
+
+.wrap .head .eye_area.smile {
+  -webkit-animation-name: smile_eye;
+          animation-name: smile_eye;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrap .head .eye {
+  background: white;
+  border: 2px solid black;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+}
+
+.wrap .head .shy_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.wrap .head .shy_area div {
+  background: #ffbcbd;
+  width: 30px;
+  height: 10px;
+  border-radius: 20px;
+  margin: 0 30px;
+}
+
+.wrap .head .shy_area.smile {
+  -webkit-animation-name: shy;
+          animation-name: shy;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrap .head .shy_area.eating div {
+  width: 130px;
+  height: 130px;
+  background: #4c4c4c;
+  border: 2px solid black;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.wrap .head .shy_area.eating div:first-child {
+  left: -50px;
+  border-right: none;
+  border-bottom: none;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+}
+
+.wrap .head .shy_area.eating div:first-child:after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  background: rgba(255, 188, 189, 0.7);
+  margin-left: 10px;
+}
+
+.wrap .head .shy_area.eating div:last-child {
+  right: -50px;
+  border-left: none;
+  border-bottom: none;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+.wrap .head .shy_area.eating div:last-child:after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  background: rgba(255, 188, 189, 0.7);
+  margin-left: 30px;
+}
+
+.wrap .head .mouse {
+  background: black;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  margin-left: -15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+
+.wrap .head .mouse::after {
+  content: '';
+  display: block;
+  background: #ffbcbd;
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  bottom: -5px;
+  left: 7px;
+}
+
+.wrap .head .mouse.smile {
+  -webkit-animation-name: smile;
+          animation-name: smile;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrap .head .mouse.smile::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: #4c4c4c;
+  border-radius: 100%;
+  position: absolute;
+  top: -30px;
+  border-bottom: 10px solid white;
+  -webkit-animation-name: smile_teeth;
+          animation-name: smile_teeth;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrap .head .mouse.smile::after {
+  -webkit-animation-name: smile_tungh;
+          animation-name: smile_tungh;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wrap .head .mouse.eating {
+  width: 50px;
+  height: 70px;
+  border-radius: 70px;
+  bottom: 50px;
+  margin-left: -25px;
+}
+
+.wrap .head .mouse.eating::after {
+  bottom: -40px;
+  left: 12px;
+  border-radius: 100px;
+  height: 50px;
+}
+
+.wrap .btn_area {
+  margin-top: 30px;
+}
+
+.wrap .btn_area button {
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  border: none;
+  background: none;
+  border-radius: 3px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.wrap .btn_area button:nth-child(1) {
+  background: #333333;
+}
+
+.wrap .btn_area button:nth-child(2) {
+  background: #78b1fa;
+}
+
+.wrap .btn_area button:nth-child(3) {
+  background: #4abe77;
+}
+
+.wrap .btn_area button:nth-child(4) {
+  background: #f3503b;
+}
+
+@-webkit-keyframes smile_eye {
+  0% {
+    margin-top: 70px;
+  }
+  100% {
+    margin-top: 50px;
+  }
+}
+
+@keyframes smile_eye {
+  0% {
+    margin-top: 70px;
+  }
+  100% {
+    margin-top: 50px;
+  }
+}
+
+@-webkit-keyframes smile {
+  0% {
+    width: 30px;
+    height: 20px;
+    margin-left: -15px;
+    bottom: 80px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  100% {
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+    bottom: 20px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+  }
+}
+
+@keyframes smile {
+  0% {
+    width: 30px;
+    height: 20px;
+    margin-left: -15px;
+    bottom: 80px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  100% {
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+    bottom: 20px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+  }
+}
+
+@-webkit-keyframes smile_tungh {
+  0% {
+    content: '';
+    display: block;
+    background: #ffbcbd;
+    width: 50%;
+    height: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: 7px;
+  }
+  100% {
+    bottom: -70px;
+    width: 160px;
+    left: 50%;
+    margin-left: -80px;
+    height: 100px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+  }
+}
+
+@keyframes smile_tungh {
+  0% {
+    content: '';
+    display: block;
+    background: #ffbcbd;
+    width: 50%;
+    height: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: 7px;
+  }
+  100% {
+    bottom: -70px;
+    width: 160px;
+    left: 50%;
+    margin-left: -80px;
+    height: 100px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+  }
+}
+
+@-webkit-keyframes smile_teeth {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+  100% {
+    top: -30px;
+    opacity: 1;
+  }
+}
+
+@keyframes smile_teeth {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+  100% {
+    top: -30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shy {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shy {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

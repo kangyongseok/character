@@ -1,0 +1,306 @@
+$skin-color: #4c4c4c;
+$border: 2px solid black;
+
+
+    
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+}
+
+.wrap {
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .head {
+        background: $skin-color;
+        border: $border;
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+        position: relative;
+        .eye_area {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 70px;
+        }
+        .eye_area.smile {
+            animation-name: smile_eye;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        .eye {
+            background: white;
+            border: $border;
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+        }
+        .shy_area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            div {
+                background: #ffbcbd;
+                width: 30px;
+                height: 10px;
+                border-radius: 20px;
+                margin: 0 30px;
+            }
+        }
+        .shy_area.smile {
+            animation-name: shy;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        .shy_area.eating {
+            div {
+                width: 130px;
+                height: 130px;
+                background: $skin-color;
+                border: $border;
+                border-radius: 100px;
+                position: absolute;
+                bottom: 30px;
+                // border-top: 5px solid black;
+                // &::after {
+                //     content: '';
+                //     display: block;
+                //     position: absolute;
+                //     width: 90px;
+                //     height: 90px;
+                //     // border-top: 10px solid rgba(255, 188, 189, 0.7);
+                //     border-radius: 100px;
+                //     background: rgba(255, 188, 189, 0.7);
+                // }
+                &:first-child {
+                    left: -50px;
+                    border-right: none;
+                    border-bottom: none;
+                    transform: rotate(-50deg);
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 100px;
+                        background: rgba(255, 188, 189, 0.7);
+                        margin-left: 10px;
+                    }
+                }
+                &:last-child {
+                    right: -50px;
+                    border-left: none;
+                    border-bottom: none;
+                    transform: rotate(50deg);
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 100px;
+                        background: rgba(255, 188, 189, 0.7);
+                        margin-left: 30px;
+                        // margin-top: 5px;
+                    }
+                }
+            }
+        }
+        .mouse {
+            background: black;
+            width: 30px;
+            height: 20px;
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            margin-left: -15px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            overflow: hidden;
+            &::after {
+                content: '';
+                display: block;
+                background: #ffbcbd;
+                width: 50%;
+                height: 10px;
+                position: absolute;
+                bottom: -5px;
+                left: 7px;
+            }
+        }
+        .mouse.smile {
+            animation-name: smile;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 50px;
+                background: $skin-color;
+                border-radius: 100%;
+                position: absolute;
+                top: -30px;
+                border-bottom: 10px solid white;
+                animation-name: smile_teeth;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+            }
+            &::after {
+                animation-name: smile_tungh;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+            }
+        }
+        .mouse.eating {
+            width: 50px;
+            height: 70px;
+            border-radius: 70px;
+            bottom: 50px;
+            margin-left: -25px;
+            &::after {
+                bottom: -40px;
+                left: 12px;
+                border-radius: 100px;
+                height: 50px;
+            }
+        }
+    }
+
+    .btn_area {
+        margin-top: 30px;
+        button {
+            font-size: 15px;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            border: none;
+            background: none;
+            border-radius: 3px;
+            width: 100px;
+            cursor: pointer;
+            &:nth-child(1) {
+                background: #333333;
+            }
+            &:nth-child(2) {
+                background: #78b1fa;
+            }
+            &:nth-child(3) {
+                background: #4abe77;
+            }
+            &:nth-child(4) {
+                background: #f3503b;
+            }
+        }
+    }
+
+    // .body {
+    //     border-bottom: 150px solid $skin-color;
+    //     border-left: 25px solid transparent;
+    //     border-right: 25px solid transparent;
+    //     height: 0;
+    //     width: 250px;
+    //     position: relative;
+    //     top: -50px;
+    // }
+}
+
+
+@keyframes smile_eye {
+    0% {
+        margin-top: 70px;
+    }
+
+    100% {
+        margin-top: 50px;
+    }
+}
+
+@keyframes smile {
+    0% {
+        width: 30px;
+        height: 20px;
+        margin-left: -15px;
+        bottom: 80px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    100% {
+        width: 200px;
+        height: 100px;
+        margin-left: -100px;
+        bottom: 20px;
+        border-bottom-left-radius: 500px;
+        border-bottom-right-radius: 500px;
+    }
+}
+
+@keyframes smile_tungh {
+    0% {
+        content: '';
+        display: block;
+        background: #ffbcbd;
+        width: 50%;
+        height: 10px;
+        position: absolute;
+        bottom: -5px;
+        left: 7px;
+    }
+        
+    100% {
+        bottom: -70px;
+        width: 160px;
+        left: 50%;
+        margin-left: -80px;
+        height: 100px;
+        border-top-left-radius: 200px;
+        border-top-right-radius: 200px;
+    }
+}
+
+@keyframes smile_teeth {
+    0% {
+        opacity: 0;
+        top: -70px;
+    }
+        
+    100% {
+        top: -30px;
+        opacity: 1;
+    }
+}
+
+@keyframes shy {
+    0% {
+        opacity: 1;
+    }
+        
+    100% {
+        opacity: 0;
+    }
+}

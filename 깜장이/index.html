@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+        @import url("./style.css");
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="head">
+            <div class="eye_area">
+                <div class="eye eye_left"></div>
+                <div class="eye eye_right"></div>
+            </div>
+            <div class="shy_area">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="mouse">
+
+            </div>
+        </div>
+        <!-- <div class="body">
+
+        </div> -->
+        <div class="btn_area">
+            <button class="basic" onclick="basic()">기본</button>
+            <button class="smile" onclick="smile()">활짝웃음</button>
+            <button class="eating" onclick="eating()">먹을때</button>
+            <button onClick={}>화남</button>
+        </div>
+    </div>
+
+    <script>
+        const mouse = document.getElementsByClassName('mouse');
+        const shy = document.getElementsByClassName('shy_area');
+        const eye = document.getElementsByClassName('eye_area');
+
+        function smile() {
+            mouse[0].classList.add('smile')
+            shy[0].classList.add('smile')
+            eye[0].classList.add('smile')
+        }
+
+        function eating() {
+            mouse[0].classList.add('eating')
+            shy[0].classList.add('eating')
+            mouse[0].classList.remove('smile')
+            shy[0].classList.remove('smile')
+            eye[0].classList.remove('smile')
+        }
+
+        function basic() {
+            mouse[0].classList.remove('smile')
+            shy[0].classList.remove('smile')
+            eye[0].classList.remove('smile')
+            mouse[0].classList.remove('eating')
+            shy[0].classList.remove('eating')
+        }
+    </script>
+</body>
+</html>
